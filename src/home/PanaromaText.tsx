@@ -4,7 +4,7 @@ export default function PanaromaText() {
     const textList = [
         "Android Developer",
         "Flutter Developer",
-        "React Native Developer",
+        "React-Native Developer",
         "Backend Engineer",
         "Frontend Developer"
     ]
@@ -58,9 +58,9 @@ export default function PanaromaText() {
             return ""
         }
         if (obscureDirection == "before") {
-            return ">".repeat(obscurePoint + 1)
+            return "/".repeat(obscurePoint + 1)
         }
-        return ">".repeat(greaterTextLength - obscurePoint)
+        return "/".repeat(greaterTextLength - obscurePoint)
     }
 
     function getEndingUnobscuredText(): string {
@@ -75,7 +75,7 @@ export default function PanaromaText() {
     return (
         <span>
             <span style={{color: "skyblue"}}>{getStartingUnobscuredText()}</span>
-            <span>{getObscuredText()}</span>
+            <span style={{color: "dodgerblue"}}>{getObscuredText()}</span>
             <span style={{color: "skyblue"}}>{getEndingUnobscuredText()}</span>
             {/* <button onClick={update}>Click Me</button> */}
         </span>
