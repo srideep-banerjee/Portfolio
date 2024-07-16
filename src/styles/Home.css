@@ -1,8 +1,22 @@
 .home-container {
     display: flex;
+    flex-direction: column;
+}
+
+.home-front {
+    display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 100vh;
     padding: 0 48px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 48px
 }
 
 h1 {
@@ -28,6 +42,7 @@ h3 {
 
 .name {
     color: dodgerblue;
+    font-weight: 600;
 }
 
 section {
@@ -40,6 +55,7 @@ section {
 p {
     padding-top: 20px;
     font-size: 1.1rem;
+    line-height: 1.5;
     width: 50vw
 }
 
@@ -55,4 +71,33 @@ img {
     width: 50%;
     align-self: center;
     border-radius: 50%;
+}
+
+.contacts-container {
+    padding-top: 3rem;
+    display: grid;
+    row-gap: 1.5rem;
+    column-gap: 2.5rem;
+    grid-template-columns: min-content min-content;
+}
+
+.contact-attribute {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.contact-value {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: skyblue;
+}
+
+.contact-value a {
+    color: skyblue;
+    font-style: normal;
+}
+
+.contact-value a:hover {
+    color: dodgerblue;
+    font-style: normal;
 }
