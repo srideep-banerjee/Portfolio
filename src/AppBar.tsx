@@ -11,7 +11,7 @@ export default function AppBar({ items, seletedIndex, onSelectionChange }: AppBa
     for (let index = 0; index < items.length; index++) {
         elements.push(
             <li
-                onClick={()=>(index == seletedIndex ? onSelectionChange(index) : null)}
+                onClick={()=>(index != seletedIndex ? onSelectionChange(index) : null)}
                 className={index == seletedIndex ? "selected" : ""}
             >
                 {items[index]}
