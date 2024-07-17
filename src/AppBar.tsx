@@ -1,13 +1,28 @@
 import './styles/AppBar.css'
 
-export default function AppBar() {
+type AppBarProps = {
+    items: string[]
+    seletedIndex: number
+    onSelectionChange: (selection: number) => void
+}
+export default function AppBar({ items, seletedIndex, onSelectionChange }: AppBarProps) {
+
+    const elements: JSX.Element[] = []
+    for (let index = 0; index < items.length; index++) {
+        elements.push(
+            <li
+                onClick={()=>(index == seletedIndex ? onSelectionChange(index) : null)}
+                className={index == seletedIndex ? "selected" : ""}
+            >
+                {items[index]}
+            </li>
+        )
+    }
+
     return (
         <nav className='app-bar-container'>
             <ul>
-                <li>Profile</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Education</li>
+                {elements}
             </ul>
         </nav>
     )

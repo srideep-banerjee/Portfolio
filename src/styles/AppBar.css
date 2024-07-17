@@ -14,3 +14,15 @@ ul {
     padding: 0;
     margin: 0;
 }
+
+li {
+    cursor: pointer;
+}
+
+li:hover:not(.selected) {
+    color: dodgerblue;
+}
+
+.selected {
+    color: skyblue;
+}
