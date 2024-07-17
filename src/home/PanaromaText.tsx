@@ -14,27 +14,29 @@ export default function PanaromaText() {
     const [obscureDirection, setObscureDirection] = useState<"before" | "after">("before")
     
     useEffect(()=>{
-        update()
+        const timerId = update()
+        if (timerId == undefined) return
+        return () => clearTimeout(timerId)
     })
     
-    function update() {
+    function update(): (number | undefined) {
         const nextIndex = (index + 1) % textList.length
         const greaterTextLength = Math.max(textList[nextIndex].length, textList[index].length)
         if (obscurePoint == null) {
-            setTimeout(() => {
+            return setTimeout(() => {
                 setObscurePoint(0)
             }, 4000)
         } else if (obscurePoint < greaterTextLength - 1) {
-            setTimeout(() => {
+            return setTimeout(() => {
                 setObscurePoint(obscurePoint + 1)
             }, 100)
         } else if (obscurePoint == greaterTextLength - 1 && obscureDirection == "before") {
-            setTimeout(() => {
+            return setTimeout(() => {
                 setObscurePoint(0)
                 setObscureDirection("after")
             }, 100);
         } else if (obscurePoint == greaterTextLength - 1 && obscureDirection == "after") {
-            setTimeout(() => {
+            return setTimeout(() => {
                 setObscurePoint(null)
                 setObscureDirection("before")
                 setIndex(nextIndex)
