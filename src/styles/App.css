@@ -6,7 +6,7 @@
 }
 
 header {
-  position: fixed;
+  position: sticky;
   backdrop-filter: blur(1rem);
   top: 0px;
   width: 100%;

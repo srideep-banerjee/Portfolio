@@ -1,11 +1,12 @@
 import "../styles/Home.css"
+import "../styles/common.css"
 import PanaromaText from "./PanaromaText"
 import pfp from "../assets/pfp.jpg"
 
 export default function Home() {
     return (
         <div className="home-container">
-            <div className="home-front">
+            <div className="appbar-adjusted-height home-front">
                 <section>
                     <h3>Hello there,</h3>
                     <h1>I'm <span className="name">Srideep Banerjee</span></h1>

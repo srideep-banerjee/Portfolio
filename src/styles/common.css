@@ -1,0 +1,6 @@
+.appbar-adjusted-height {
+    height: 100vh;
+    margin-top: -3.2rem;
+    padding-top: 3.2rem;
+    box-sizing: border-box;
+  }
