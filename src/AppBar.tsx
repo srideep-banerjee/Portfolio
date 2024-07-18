@@ -1,4 +1,4 @@
-import './styles/AppBar.css'
+import './styles/AppBar.modules.css'
 
 type AppBarProps = {
     items: string[]
@@ -11,6 +11,7 @@ export default function AppBar({ items, seletedIndex, onSelectionChange }: AppBa
     for (let index = 0; index < items.length; index++) {
         elements.push(
             <li
+                key={index}
                 onClick={()=>(index != seletedIndex ? onSelectionChange(index) : null)}
                 className={index == seletedIndex ? "selected" : ""}
             >
