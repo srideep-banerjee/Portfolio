@@ -1,0 +1,32 @@
+.app-bar-container {
+    display: flex;
+    align-self: stretch;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-content: center;
+    justify-content: center;
+    height: var(--appbar-height);
+}
+
+.app-bar-list {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.app-bar-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.app-bar-item:hover:not(.selected) {
+    color: dodgerblue;
+}
+
+.selected {
+    color: skyblue;
+}

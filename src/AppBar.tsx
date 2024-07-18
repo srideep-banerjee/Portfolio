@@ -1,4 +1,4 @@
-import './styles/AppBar.modules.css'
+import './styles/AppBar.css'
 
 type AppBarProps = {
     items: string[]
@@ -13,7 +13,7 @@ export default function AppBar({ items, seletedIndex, onSelectionChange }: AppBa
             <li
                 key={index}
                 onClick={()=>(index != seletedIndex ? onSelectionChange(index) : null)}
-                className={index == seletedIndex ? "selected" : ""}
+                className={"app-bar-item " + (index == seletedIndex ? "selected" : "")}
             >
                 {items[index]}
             </li>
@@ -22,7 +22,7 @@ export default function AppBar({ items, seletedIndex, onSelectionChange }: AppBa
 
     return (
         <nav className='app-bar-container'>
-            <ul>
+            <ul className='app-bar-list'>
                 {elements}
             </ul>
         </nav>
