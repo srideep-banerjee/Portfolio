@@ -27,6 +27,6 @@
     color: dodgerblue;
 }
 
-.selected {
+.app-bar-item.selected {
     color: skyblue;
 }
