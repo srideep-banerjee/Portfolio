@@ -1,26 +1,42 @@
 import './styles/App.css'
 import AppBar from './AppBar'
-import Home from './home/Home'
-import { useState } from 'react'
+import { FunctionComponent, useState } from 'react'
+import { appData } from './data/app'
 
 function App() {
-  const navbarItems = ["Profile", "Skills", "Projects", "Education"]
   const [selectedIndex, setSelectedIndex] = useState(0)
+  const appBarNames = Array.from(appData.keys())
+  
+  const Child = getChildByName(appBarNames[selectedIndex])
 
   return (
     <>
       <div className='app-container'>
         <header>
           <AppBar
-            items={navbarItems}
+            items={appBarNames}
             seletedIndex={selectedIndex}
             onSelectionChange={setSelectedIndex}
           />
         </header>
-        <Home />
+        <Child />
       </div>
     </>
   )
+}
+
+function getChildByName(name: string): FunctionComponent {
+  const component = appData.get(name)
+
+  if (component == null || component == undefined) {
+    return () => (
+      <div className='not-implemented' >
+        Not Implemented Yet
+      </div>
+    )
+  }
+  
+  return component
 }
 
 export default App
