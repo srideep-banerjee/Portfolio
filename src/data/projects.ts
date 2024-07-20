@@ -4,7 +4,7 @@ export type Project = {
     skills: Array<string>
 }
 
-export const categoryData = [
+export const projectsCategoryData = [
     "All",
     "Android",
     "Flutter",
