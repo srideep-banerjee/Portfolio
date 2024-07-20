@@ -27,8 +27,8 @@ export default function Skills() {
             <hr />
             <ul id='skill-list'>
                 {
-                    getDataByCategory(skillCategoryData[category]).map((skillName)=>(
-                        <SkillItem name={skillName} />
+                    getDataByCategory(skillCategoryData[category]).map((skillName, index)=>(
+                        <SkillItem key={index} name={skillName} />
                     ))
                 }
             </ul>
