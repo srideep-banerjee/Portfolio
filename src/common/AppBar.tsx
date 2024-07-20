@@ -1,4 +1,4 @@
-import './styles/AppBar.css'
+import '../styles/AppBar.css'
 
 type AppBarProps = {
     items: string[]
