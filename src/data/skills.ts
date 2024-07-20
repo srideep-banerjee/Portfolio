@@ -1,4 +1,4 @@
-export const categoryData = [
+export const skillCategoryData = [
     "All",
     "Languages",
     "Android",

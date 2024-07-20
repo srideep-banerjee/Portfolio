@@ -2,7 +2,7 @@ import { useState } from 'react'
 import '../styles/Skills.css'
 import '../styles/common.css'
 import RightSvg from '../assets/right.svg?react'
-import { categoryData, getDataByCategory } from '../data/skills'
+import { skillCategoryData, getDataByCategory } from '../data/skills'
 
 export default function Skills() {
     
@@ -14,7 +14,7 @@ export default function Skills() {
         <div className="skills-container appbar-adjusted-height">
             <ul id='skill-category-list'>
                 {
-                    categoryData.map((categoryName, index) => (
+                    skillCategoryData.map((categoryName, index) => (
                         <SkillCategoryItem
                             key={index}
                             index={index}
@@ -27,7 +27,7 @@ export default function Skills() {
             <hr />
             <ul id='skill-list'>
                 {
-                    getDataByCategory(categoryData[category]).map((skillName)=>(
+                    getDataByCategory(skillCategoryData[category]).map((skillName)=>(
                         <SkillItem name={skillName} />
                     ))
                 }
