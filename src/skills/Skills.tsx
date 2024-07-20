@@ -2,7 +2,7 @@ import { useState } from 'react'
 import '../styles/Skills.css'
 import '../styles/common.css'
 import right from '../assets/right.svg'
-import { categoryData, skillData } from '../data/skills'
+import { categoryData, getDataByCategory } from '../data/skills'
 
 export default function Skills() {
     
@@ -11,7 +11,7 @@ export default function Skills() {
     const onCategoryClick = (index: number) => setCategory(index)
 
     return (
-        <div className="skills-container">
+        <div className="skills-container appbar-adjusted-height">
             <ul id='skill-category-list'>
                 {
                     categoryData.map((categoryName, index) => (
@@ -19,14 +19,15 @@ export default function Skills() {
                             key={index}
                             index={index}
                             name={categoryName}
+                            selected={category == index}
                             onClick={onCategoryClick} />
                     ))
                 }
             </ul>
-            <hr></hr>
+            <hr />
             <ul id='skill-list'>
                 {
-                    skillData.map((skillName, index)=>(
+                    getDataByCategory(categoryData[category]).map((skillName)=>(
                         <SkillItem name={skillName} />
                     ))
                 }
@@ -38,12 +39,14 @@ export default function Skills() {
 type SkillCategoryItemProp = {
     index: number,
     name: string,
+    selected: boolean,
     onClick: (index: number, name: string) => void
 }
 
-function SkillCategoryItem({index, name, onClick}: SkillCategoryItemProp) {
+function SkillCategoryItem({index, name, selected, onClick}: SkillCategoryItemProp) {
+    const className = "skill-category-item" + (selected ? " selected" : "")
     return (
-        <li className='skill-category-item' onClick={()=>onClick(index, name)}>
+        <li className={className} onClick={()=>onClick(index, name)}>
             <span className='skill-category-name'>{name}</span>
             <img src={right}></img>
         </li>
