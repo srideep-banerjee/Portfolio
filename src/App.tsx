@@ -1,5 +1,5 @@
 import './styles/App.css'
-import AppBar from './AppBar'
+import AppBar from './common/AppBar'
 import { FunctionComponent, useState } from 'react'
 import { appData } from './data/app'
 
