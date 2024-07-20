@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../styles/Skills.css'
 import '../styles/common.css'
-import right from '../assets/right.svg'
+import RightSvg from '../assets/right.svg?react'
 import { categoryData, getDataByCategory } from '../data/skills'
 
 export default function Skills() {
@@ -45,10 +45,11 @@ type SkillCategoryItemProp = {
 
 function SkillCategoryItem({index, name, selected, onClick}: SkillCategoryItemProp) {
     const className = "skill-category-item" + (selected ? " selected" : "")
+    const svgClassName = "right-svg" + (selected ? " selected" : "")
     return (
         <li className={className} onClick={()=>onClick(index, name)}>
             <span className='skill-category-name'>{name}</span>
-            <img src={right}></img>
+            <RightSvg className={svgClassName} />
         </li>
     )
 }
