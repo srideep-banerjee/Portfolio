@@ -2,3 +2,16 @@
     display: flex;
     width: 100%;
 }
+
+#project-list {
+    flex: 1;
+    display: grid;
+    justify-content: space-evenly;
+    align-content: first baseline;
+    grid-template-columns: repeat(auto-fill, 16rem);
+    gap: 1.5rem;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 16px 0px;
+}

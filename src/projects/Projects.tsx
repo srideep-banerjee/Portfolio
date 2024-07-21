@@ -14,7 +14,7 @@ export default function Projects() {
                 selectedIndex={category}
                 onSelectionChange={setCategory}/>
             <hr />
-            <ul id='skill-list'>
+            <ul id='project-list'>
                 
             </ul>
         </div>
