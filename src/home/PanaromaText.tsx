@@ -79,7 +79,6 @@ export default function PanaromaText() {
             <span style={{color: "skyblue"}}>{getStartingUnobscuredText()}</span>
             <span style={{color: "dodgerblue"}}>{getObscuredText()}</span>
             <span style={{color: "skyblue"}}>{getEndingUnobscuredText()}</span>
-            {/* <button onClick={update}>Click Me</button> */}
         </span>
     )
 }
