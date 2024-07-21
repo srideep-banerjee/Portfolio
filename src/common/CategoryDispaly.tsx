@@ -1,4 +1,5 @@
 import RightSvg from '../assets/right.svg?react'
+import "../styles/CategoryDisplay.css"
 
 type CategoryDisplayProp = {
     data: Array<string>,
