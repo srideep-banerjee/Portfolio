@@ -1,29 +1,19 @@
 import { useState } from 'react'
 import '../styles/Skills.css'
 import '../styles/common.css'
-import RightSvg from '../assets/right.svg?react'
 import { skillCategoryData, getDataByCategory } from '../data/skills'
+import CategoryDisplay from '../common/CategoryDispaly'
 
 export default function Skills() {
     
     const [category, setCategory] = useState(0)
 
-    const onCategoryClick = (index: number) => setCategory(index)
-
     return (
         <div className="skills-container appbar-adjusted-height">
-            <ul id='skill-category-list'>
-                {
-                    skillCategoryData.map((categoryName, index) => (
-                        <SkillCategoryItem
-                            key={index}
-                            index={index}
-                            name={categoryName}
-                            selected={category == index}
-                            onClick={onCategoryClick} />
-                    ))
-                }
-            </ul>
+            <CategoryDisplay
+                data={skillCategoryData}
+                selectedIndex={category}
+                onSelectionChange={setCategory}/>
             <hr />
             <ul id='skill-list'>
                 {
@@ -33,24 +23,6 @@ export default function Skills() {
                 }
             </ul>
         </div>
-    )
-}
-
-type SkillCategoryItemProp = {
-    index: number,
-    name: string,
-    selected: boolean,
-    onClick: (index: number, name: string) => void
-}
-
-function SkillCategoryItem({index, name, selected, onClick}: SkillCategoryItemProp) {
-    const className = "skill-category-item" + (selected ? " selected" : "")
-    const svgClassName = "right-svg" + (selected ? " selected" : "")
-    return (
-        <li className={className} onClick={()=>onClick(index, name)}>
-            <span className='skill-category-name'>{name}</span>
-            <RightSvg className={svgClassName} />
-        </li>
     )
 }
 
