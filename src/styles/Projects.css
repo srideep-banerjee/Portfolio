@@ -5,4 +5,21 @@
 
 #project-list {
     flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.project-item-description {
+    font-size: 1rem;
+    background-color: brown;
+    color: white;
+    margin: 0;
 }
