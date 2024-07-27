@@ -31,8 +31,9 @@
 
 .project-links-container {
     display: flex;
+    flex-direction: row;
+    width: 100%;
     gap: 16px;
-    justify-content: stretch;
 }
 
 .project-link {
