@@ -3,6 +3,8 @@ import CategoryDisplay from "../common/CategoryDispaly"
 import "../styles/common.css"
 import "../styles/Projects.css"
 import LinkSvg from "../assets/link.svg?react"
+import AndroidSvg from "../assets/android.svg?react"
+import GitHubSvg from "../assets/github.svg?react"
 import { Project, projectsCategoryData, projectsData } from "../data/projects"
 
 export default function Projects() {
@@ -38,7 +40,7 @@ function ProjectItem({project}: {project: Project}) {
     if (project.apk != undefined) {
         links.push((
             <a className="project-link" href={project.apk}>
-                <LinkSvg className="project-link-icon" />
+                <AndroidSvg className="project-link-icon" />
                 Apk
             </a>
         ))
@@ -47,7 +49,7 @@ function ProjectItem({project}: {project: Project}) {
     if (project.github != undefined) {
         links.push((
             <a className="project-link" href={project.github}>
-                <LinkSvg className="project-link-icon" />
+                <GitHubSvg className="project-link-icon" />
                 GitHub
             </a>
         ))
