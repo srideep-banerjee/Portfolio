@@ -4,14 +4,24 @@
 }
 
 #project-list {
+    display: flex;
     flex: 1;
+    gap: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
     flex-direction: column;
-    align-items: stretch;
     justify-content: start;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .project-item {
     display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 16px;
+    margin: 0 16px;
+    border-radius: 16px;
     flex-direction: column;
     justify-content: center;
     align-items: start;
@@ -23,7 +33,6 @@
 
 .project-description {
     text-wrap: wrap;
-    background-color: red;
     font-size: 1rem;
     color: white;
     margin: 0;
@@ -40,7 +49,7 @@
     display: flex;
     align-items: center;
     border-radius: 500px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     padding: 2px 0.5rem;
     cursor: pointer;
 }
