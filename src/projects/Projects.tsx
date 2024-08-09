@@ -62,7 +62,9 @@ function ProjectItem({project}: {project: Project}) {
             <section className="project-links-container">
                 {links}
             </section>
-            {project.skills.join(", ")}
+            <span>
+                Skills: {project.skills.join(", ")}
+            </span>
         </li>
     )
 }
