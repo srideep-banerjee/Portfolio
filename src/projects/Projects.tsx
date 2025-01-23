@@ -63,7 +63,7 @@ function ProjectItem({project}: {project: Project}) {
                 {links}
             </section>
             <span>
-                Skills: {project.skills.join(", ")}
+                Skills: {[...project.skills.values()].join(", ")}
             </span>
         </li>
     )

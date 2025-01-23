@@ -4,7 +4,7 @@ export type Project = {
     github?: string
     apk?: string,
     link?: string,
-    skills: Array<string>
+    skills: Set<string>
 }
 
 export const projectsCategoryData = [
@@ -24,7 +24,7 @@ export const projectsData: Array<Project> = [
         link: "https://notes-102da.web.app/",
         apk: "https://drive.google.com/file/d/1-rgnU8AsQStIbGUlMhrlL5mod8tFF-ao/view?usp=sharing",
         github: "https://github.com/srideep-banerjee/Notes-Synced",
-        skills: [
+        skills: new Set([
             "Flutter",
             "Firebase Firestore",
             "Dart",
@@ -33,24 +33,24 @@ export const projectsData: Array<Project> = [
             "provider",
             "sqflite",
             "Indexed DB"
-        ]
+        ])
     },
     {
         name: "Todo Flutter",
         description: `A Todo application created in flutter`,
         github: "https://github.com/srideep-banerjee/Todo-Flutter",
         apk: "https://drive.google.com/file/d/1-y-veAhlbZEaA2n7WE4Jlnh8aIikPKLY/view?usp=drive_link",
-        skills: [
+        skills: new Set([
             "Flutter",
             "Dart",
             "Future"
-        ]
+        ])
     },
     {
         name: "Door Alert",
         description: "An Android + IoT project to send push notification to android app whenever movement is detected at a door (Uses Firebase Cloud Messaging and Realtime Database)",
         link: "https://www.youtube.com/watch?v=jVoAJNi9HJ8",
-        skills: [
+        skills: new Set([
             "Internet of Things(IoT)",
             "NodeMCU",
             "Firebase Cloud Messaging",
@@ -58,57 +58,59 @@ export const projectsData: Array<Project> = [
             "Android SDK",
             "XML",
             "Kotlin",
-        ]
+        ])
     },
     {
         name: "Piccy",
         description: "A native android image sharing application with firebase backend and mvvm architecture",
         github: "https://github.com/srideep-banerjee/Piccy",
-        skills: [
+        skills: new Set([
             "MVVM",
             "Jetpack Compose",
             "Kotlin",
             "Firebase Firestore",
-            "Firebase Storage"
-        ]
+            "Firebase Storage",
+            "Android SDK"
+        ])
     },
     {
         name: "Canvas Card Editor",
         description: "A Jetpack Compose based Android application to create cards, by adding text to a canvas, changing text attributes like position, color, font family and font size.",
         github: "https://github.com/srideep-banerjee/Canvas-Card-Editor",
         apk: "https://drive.google.com/file/d/1-0AdnJGx32_9Y5zRyo4glwPy1rWQUNp5/view?usp=drive_link",
-        skills: [
+        skills: new Set([
             "Jetpack Compose",
             "Kotlin",
             "MVVM",
             "Android SDK"
-        ]
+        ])
     },
     {
         name: "Contacts",
         description: "A native android contacts application that can view contacts, search contacts, add new contacts and make phone calls to a number",
         github: "https://github.com/srideep-banerjee/Contacts",
         apk: "https://drive.google.com/file/d/1IwXT8dtSzNk1Fy4gFOP0oRGUKnpA2XlV/view?usp=sharing",
-        skills: [
+        skills: new Set([
             "Java",
             "Android SDK",
             "MVVM",
             "XML",
             "SQLite"
-        ]
+        ])
     },
     {
         name: "Room Compose App",
         description: "A demo android application built using Jetpack Compose and Room DB",
         github: "https://github.com/srideep-banerjee/Room-Compose-App",
         apk: "https://drive.google.com/file/d/11jeRf5Bdy2X5XQB8SpkLCRcy-kZJVIcV/view?usp=drive_link",
-        skills: [
+        skills: new Set([
             "Kotlin",
             "Jetpack Compose",
             "MVVM",
             "Room DB",
-            "SQLite"
-        ]
+            "SQLite",
+            "Android SDK"
+        ])
     },
     {
         name: "Time Table Scheduler Backend",
@@ -117,40 +119,40 @@ export const projectsData: Array<Project> = [
 2. UI(frontend) written in HTML, CSS and Javascript. Both communicating using REST API endpoints,
 3. A CEF based custom browser written in java to display the UI without browser restrictions.`,
         github: "https://github.com/srideep-banerjee/TimeTableScheduler-Backend",
-        skills: [
+        skills: new Set([
             "Java",
             "REST API",
             "Genetic Algorithms"
-        ]
+        ])
     },
     {
         name: "Time Table Creator ReactJS",
         description: "It's a web application UI created using ReactJS through which a Time Table can be created manually and also automatically using AI. It's the react version of old Time Table Creator UI.",
         github: "https://github.com/srideep-banerjee/Time-Table-Creator-ReactJS",
-        skills: [
+        skills: new Set([
             "React",
             "JavaScript",
             "HTML",
             "CSS"
-        ]
+        ])
     },
     {
         name: "Todo Spring Backend",
         description: "A Spring application that serves a Todo web application along with necessary REST API endpoints, while storing data in MySQL database.",
         github: "https://github.com/srideep-banerjee/Todo-Spring-Backend",
-        skills: [
+        skills: new Set([
             "Spring Framework",
             "REST API",
             "MySQL"
-        ]
+        ])
     },
     {
         name: "Todo React Frontend",
         description: "A web app to create Todos built using typescript and react",
         github: "https://github.com/srideep-banerjee/Todo-React-Frontend",
-        skills: [
+        skills: new Set([
             "TypeScript",
             "React"
-        ]
+        ])
     },
 ]
