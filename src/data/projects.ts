@@ -31,7 +31,7 @@ export const projectsData: Array<Project> = [
             "Stream",
             "Future",
             "provider",
-            "sqflite",
+            "SQLite",
             "Indexed DB"
         ])
     },
@@ -122,7 +122,8 @@ export const projectsData: Array<Project> = [
         skills: new Set([
             "Java",
             "REST API",
-            "Genetic Algorithms"
+            "Genetic Algorithms",
+            "SQLite"
         ])
     },
     {
