@@ -61,6 +61,19 @@ export const projectsData: Array<Project> = [
         ])
     },
     {
+        name: "Led-NodeMCU",
+        description: "An Android + IoT project to control electronics(LEDs) using android app through NodeMCU microcontroller",
+        link: "https://www.youtube.com/watch?v=qOJX1L13l5U",
+        skills: new Set([
+            "Internet of Things(IoT)",
+            "NodeMCU",
+            "TCP",
+            "Android SDK",
+            "XML",
+            "Kotlin",
+        ])
+    },
+    {
         name: "Piccy",
         description: "A native android image sharing application with firebase backend and mvvm architecture",
         github: "https://github.com/srideep-banerjee/Piccy",
