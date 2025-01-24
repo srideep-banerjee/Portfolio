@@ -11,13 +11,12 @@ export const projectsCategoryData = [
     "All",
     "Android",
     "Flutter",
-    "React-Native",
     "Backend",
     "Frontend",
     "DBMS",
 ]
 
-export const projectsData: Array<Project> = [
+const projectsData: Array<Project> = [
     {
         name: "Notes-Synced",
         description: `An Android / Web application built using flutter and firebase backend to perform CRUD operations on notes, synced across multiple devices`,
@@ -170,3 +169,80 @@ export const projectsData: Array<Project> = [
         ])
     },
 ]
+
+const projectsMap: Map<string, Project> = new Map(
+    projectsData.map(project => [project.name, project])
+)
+
+const androidProjectsList: Array<string> = [
+    "Piccy",
+    "Door Alert",
+    "Led-NodeMCU",
+    "Canvas Card Editor",
+    "Contacts",
+    "Room Compose App"
+]
+
+const androidProjectsData: Array<Project> = androidProjectsList.map(
+    projectName => projectsMap.get(projectName)!
+)
+
+const flutterProjectsList = [
+    "Notes-Synced",
+    "Todo Flutter",
+]
+
+const flutterProjectsData: Array<Project> = flutterProjectsList.map(
+    projectName => projectsMap.get(projectName)!
+)
+
+const backendProjectsList = [
+    "Time Table Scheduler Backend",
+    "Todo Spring Backend"
+]
+
+const backendProjectsData: Array<Project> = backendProjectsList.map(
+    projectName => projectsMap.get(projectName)!
+)
+
+const frontendProjectList = [
+    "Time Table Creator ReactJS",
+    "Todo React Frontend"
+]
+
+const frontendProjectData: Array<Project> = frontendProjectList.map(
+    projectName => projectsMap.get(projectName)!
+)
+
+const dbmsProjectList = [
+    "Time Table Scheduler Backend",
+    "Notes-Synced",
+    "Piccy",
+    "Todo Spring Backend"
+]
+
+const dbmsProjectData: Array<Project> = dbmsProjectList.map(
+    projectName => projectsMap.get(projectName)!
+)
+
+export function getProjectDataByCategory(name: string): Array<Project> {
+    if (name == "All") {
+        return projectsData
+    }
+    if (name == "Android") {
+        return androidProjectsData
+    }
+    if (name == "Flutter") {
+        return flutterProjectsData
+    }
+    if (name == "Backend") {
+        return backendProjectsData
+    }
+    if (name == "Frontend") {
+        return frontendProjectData
+    }
+    if (name == "DBMS") {
+        return dbmsProjectData
+    }
+    return []
+}

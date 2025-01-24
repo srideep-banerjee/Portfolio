@@ -5,7 +5,7 @@ import "../styles/Projects.css"
 import LinkSvg from "../assets/link.svg?react"
 import AndroidSvg from "../assets/android.svg?react"
 import GitHubSvg from "../assets/github.svg?react"
-import { Project, projectsCategoryData, projectsData } from "../data/projects"
+import { getProjectDataByCategory, Project, projectsCategoryData } from "../data/projects"
 
 export default function Projects() {
     const [category, setCategory] = useState(0)
@@ -19,7 +19,9 @@ export default function Projects() {
             <hr />
             <ul id='project-list'>
                 {
-                    projectsData.map((project)=>(<ProjectItem project={project} />))
+                    getProjectDataByCategory(projectsCategoryData[category]).map(
+                        (project)=>(<ProjectItem project={project} />)
+                    )
                 }
             </ul>
         </div>
