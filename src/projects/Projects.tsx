@@ -20,7 +20,7 @@ export default function Projects() {
             <ul id='project-list'>
                 {
                     getProjectDataByCategory(projectsCategoryData[category]).map(
-                        (project)=>(<ProjectItem project={project} />)
+                        (project)=>(<ProjectItem key={project.name} project={project} />)
                     )
                 }
             </ul>
@@ -58,7 +58,7 @@ function ProjectItem({project}: {project: Project}) {
     }
     
     return (
-        <li className="project-item">
+        <div className="project-item">
             <span className="project-name">{project.name}</span>
             <pre className="project-description">{project.description}</pre>
             <section className="project-links-container">
@@ -67,6 +67,6 @@ function ProjectItem({project}: {project: Project}) {
             <span>
                 Skills: {[...project.skills.values()].join(", ")}
             </span>
-        </li>
+        </div>
     )
 }
