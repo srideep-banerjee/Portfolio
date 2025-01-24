@@ -97,13 +97,13 @@ const tools = [
 
 let all = languages
     .concat(
-        tools,
         android,
         flutter,
         reactNative,
         backend,
         frontend,
-        dbms
+        dbms,
+        tools
     )
 all = [...new Set(all)]
 
