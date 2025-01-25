@@ -32,7 +32,7 @@ function ProjectItem({project}: {project: Project}) {
     const links = []
     if (project.link != undefined) {
         links.push((
-            <a className="project-link" href={project.link}>
+            <a key={"link"} className="project-link" href={project.link}>
                 <LinkSvg className="project-link-icon" />
                 Link
             </a>
@@ -41,7 +41,7 @@ function ProjectItem({project}: {project: Project}) {
 
     if (project.apk != undefined) {
         links.push((
-            <a className="project-link" href={project.apk}>
+            <a key={"apk"} className="project-link" href={project.apk}>
                 <AndroidSvg className="project-link-icon" />
                 Apk
             </a>
@@ -50,7 +50,7 @@ function ProjectItem({project}: {project: Project}) {
 
     if (project.github != undefined) {
         links.push((
-            <a className="project-link" href={project.github}>
+            <a key={"github"} className="project-link" href={project.github}>
                 <GitHubSvg className="project-link-icon" />
                 GitHub
             </a>

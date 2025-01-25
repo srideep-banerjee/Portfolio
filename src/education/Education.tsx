@@ -8,7 +8,7 @@ export default function Educations() {
             <ul id="edu-list">
                 {
                     educationList.map(
-                        (education) => <EducationItem education={education} />
+                        (education, index) => <EducationItem key={index} education={education} />
                     )
                 }
             </ul>
