@@ -1,0 +1,12 @@
+#panaroma-container {
+    display: inline-block;
+    width: 24rem;
+}
+
+.unobscured-text {
+    color: skyblue;
+}
+
+.obscured-text {
+    color: dodgerblue;
+}
