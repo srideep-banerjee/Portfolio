@@ -38,12 +38,14 @@
 }
 
 .edu-item-detail {
-    padding-bottom: 0.25rem;
+    display: flex;
+    padding-bottom: 0.5rem;
     gap: 12px;
 }
 
 .edu-field {
     font-size: 1rem;
+    width: fit-content;
     color: blanchedalmond
 }
 
@@ -51,5 +53,5 @@
     padding-left: 8px;
     font-size: 1rem;
     font-weight: 100;
-    width: 100%;
+    flex: 1;
 }
