@@ -6,7 +6,8 @@
 .home-front {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    min-height: 100vh;
+    flex: 1;
     padding-left: 48px;
     padding-right: 48px;
 }
@@ -42,6 +43,7 @@ h3 {
 }
 
 .name {
+    display: inline-block;
     color: dodgerblue;
     font-weight: 600;
 }
@@ -79,7 +81,7 @@ img {
     display: grid;
     row-gap: 1.5rem;
     column-gap: 2.5rem;
-    grid-template-columns: min-content min-content;
+    grid-template-columns: min-content auto
 }
 
 .contact-attribute {
@@ -90,6 +92,7 @@ img {
 .contact-value {
     font-size: 1.5rem;
     font-weight: 300;
+    overflow-wrap: anywhere;
     color: skyblue;
 }
 
