@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import '../styles/PanaromaText.css'
 
 export default function PanaromaText() {
     const textList = [
