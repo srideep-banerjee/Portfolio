@@ -14,9 +14,8 @@ export const educationList: Array<Education> = [
         institution: "Bengal College of Engineering and Technology, Durgapur",
         start: "2021",
         end: "2025",
-        ongoing: true,
         marking: "cgpa",
-        cgpa: 8.23
+        cgpa: 8.07
     },
     {
         degree: "Senior Secondary, XII (CBSE)",
