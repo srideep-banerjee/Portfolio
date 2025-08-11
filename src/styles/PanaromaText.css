@@ -10,3 +10,9 @@
 .obscured-text {
     color: dodgerblue;
 }
+
+@media (max-width: 560px) {
+    #panaroma-container {
+        width: 100%;
+    }
+}

@@ -12,16 +12,19 @@
   --appbar-height: 3.2rem
 }
 
+/* * {
+  outline: 1px solid #f00 !important;
+} */
+
 #root {
   display: flex;
   width: 100%
 }
 
-html, body {
+body {
   margin: 0;
   display: flex;
   place-items: stretch;
-  width: 100%;
   width: 100%;
   min-width: 320px;
   min-height: 100%;

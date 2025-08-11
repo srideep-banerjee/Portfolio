@@ -76,7 +76,7 @@ export default function PanaromaText() {
         return textList[index].substring(obscurePoint + 1)
     }
     return (
-        <span style={{width: "24rem", display: "inline-block"}}>
+        <span id="panaroma-container">
             <span className="unobscured-text">{getStartingUnobscuredText()}</span>
             <span className="obscured-text">{getObscuredText()}</span>
             <span className="unobscured-text">{getEndingUnobscuredText()}</span>
